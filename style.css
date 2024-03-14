@@ -3,16 +3,21 @@
     padding: 0;
 }
 
+body {
+    background-color: #333333
+    ;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-bottom: 1px solid #77c5d3;
-    color: #77c5d3;
+    border-bottom: 1px solid #006666;
+    color: #006666;
 }
 
 .addBookButton {
-    background-color: #77c5d3;
+    background-color: #006666;
     border-radius: 100%;
     padding: 10px 15px;
     font-size: large;
@@ -29,6 +34,7 @@ form {
 form .top-side {
     display: flex;
     justify-content: space-between;
+    margin-bottom: -20px;
 }
 
 .close {
@@ -56,9 +62,27 @@ form input {
     border-bottom: 1px solid black;
 }
 
+.close {
+    color: white;
+    background-color: black;
+}
+
+.submitBtn {
+    color: white;
+    background-color: #006666;
+    border-radius: 6px;
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.last {
+    justify-content: end;
+}
 
 /*       Dialog       */
 .dialog {
+    background-color: #006666;
     position: fixed;
     top: 40%;
     left: 50%;
@@ -71,9 +95,44 @@ form input {
 
 .dialog form {
     width: 300px;
-    /* optional: adjust the width of the dialog */
 }
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row input {
+    width: 250px;
+    height: 20px;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.row {
+    display: flex;
+    margin-top: 20px;
+}
+
+/*            LIBRARY LAYOUT AND CARD STYLING              */
+
+.library {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #006666;
+    border-radius: 8px;
+    width: 250px;
+    height: 300px;
+    font-size: large;
+    color: #a3a3a3;
+    word-wrap: break-word;
 }
