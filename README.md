@@ -8,3 +8,5 @@ This project is a simple Library Management System implemented using HTML, CSS, 
 2. **Displaying Books:** The added books are displayed as cards in the library section, showing their title, author, and number of pages.
 3. **Marking Books:** Each book card has a "READ" button that users can click to toggle between marking the book as read or not read. The button's color changes to indicate the read status.
 4. **Deleting Books:** Users can delete books from their library by clicking on the "DELETE" button on the respective book card.
+
+## Live Demo : HTTPS://akismkn.github.io/Library/
