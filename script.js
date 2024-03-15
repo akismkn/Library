@@ -10,6 +10,7 @@ function addBookToLibrary(title, author, pages) {
 }
 
 function updateTheLibraryContainer(newBook) {
+    const library = document.querySelector(".library");
     //create a new card
     const newDiv = document.createElement("div");
     newDiv.className = "card";
@@ -27,26 +28,29 @@ function updateTheLibraryContainer(newBook) {
     newDiv.appendChild(text);
     // read or not read button transfer to the card
     const readButton = document.createElement("button");
-    readButton.innerText = "Read";
+    readButton.innerText = "READ";
     readButton.className = "readButton";
     newDiv.appendChild(readButton);
-    // PENDING TO READ/NOT-READ BUTTON UPDATE
+    // READ/NOT-READ BUTTON UPDATE WITH CLICK
     readButton.addEventListener("click", () => {
-        if (readButton.innerText === "Read") {
-            readButton.innerText = "Not read";
+        if (readButton.innerText === "READ") {
+            readButton.innerText = "NOT READ";
             readButton.classList.add("redColor");
         } else {
-            readButton.innerText = "Read";
+            readButton.innerText = "READ";
             readButton.classList.remove("redColor");
         }
     });
     // delete button transfer to the card
     const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete"
+    deleteButton.innerText = "DELETE"
     deleteButton.className = "deleteButton";
     newDiv.appendChild(deleteButton);
+    // DELETE BUTTON REMOVES CARD FROM THE PAGE
+    deleteButton.addEventListener("click", () => {
+        library.removeChild(newDiv)
+    })
     // transfer the cards inside the library (page)
-    const library = document.querySelector(".library");
     library.appendChild(newDiv);
 }
 
